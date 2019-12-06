@@ -13,7 +13,7 @@ parts = soup.find_all(class_ = 'textList flsty cfix')
 list = []
 
 for part in parts:
-    namea = part.find_all('a')
+    name = part.find_all('a')
     item = []
     for i in namea:
         nameb = i.text
@@ -21,7 +21,6 @@ for part in parts:
         url1 = 'https://www.jobui.com{x}jobs'
         url2 = url1.format(x = urls)
         item.append(nameb + '----' + '网址:' + '----' + url2)
-        #item.append()
         list.append(item)
 
 print(list)
